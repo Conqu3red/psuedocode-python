@@ -1,0 +1,27 @@
+SUBROUTINE TotalOut(a, b)
+    c ← a + b
+    WHILE a < c
+        a ← a + 1
+        b ← b – a
+    ENDWHILE
+    RETURN b
+ENDSUBROUTINE
+
+
+a ← 1
+REPEAT
+    OUTPUT a
+    a ← a + 1
+UNTIL a = 4
+
+a ← 1
+IF (a MOD 2) = 0
+THEN
+    OUTPUT 'even'
+ELSE
+    OUTPUT 'odd'
+ENDIF
+
+FOR a ← 1 TO 3
+    OUTPUT a
+ENDFOR
