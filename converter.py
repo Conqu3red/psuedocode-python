@@ -41,6 +41,8 @@ regex_translations = {
     r"FOR\s*(\w)\s*=\s*(\d*)\s*TO\s*(\d)": fix_for_loop
 }
 
+with open("helper_functions.py") as f:
+    helper_functions = f.read()
 
 def convert(string: str):
     result = string
@@ -53,4 +55,4 @@ def convert(string: str):
         else:
             result = re.sub(regex_expression, process_function, result, flags=re.IGNORECASE)
 
-    return result
+    return helper_functions + result
